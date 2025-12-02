@@ -67,7 +67,7 @@ import { Input } from "./components/Input/Input";
 />;
 ```
 
-### 2. Toast Component (<Toast />)
+### 2. Toast Component (`<Toast />`)
 
 A notification component designed to provide feedback without blocking user interaction.
 
@@ -95,7 +95,7 @@ import { Toast } from "./components/Toast/Toast";
 }
 ```
 
-### 3. Sidebar Menu (<Sidebar />)
+### 3. Sidebar Menu (`<Sidebar />`)
 
 A recursive navigation menu that supports infinite nesting levels.
 
