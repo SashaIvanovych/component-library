@@ -1,0 +1,112 @@
+.sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 16rem;
+  background: var(--background-color, #fffdf7);
+  z-index: 100;
+  transform: translateX(-100%);
+  transition: all 0.3s ease 0s;
+
+  &.open {
+    transform: translateX(0);
+  }
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.sidebarContent {
+  padding: 1rem 0;
+  overflow-y: auto;
+  height: calc(100% - 60px);
+}
+
+.menuItemWrapper {
+  width: 100%;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+
+  &:hover {
+    background-color: #f5f5f5;
+  }
+}
+.level0 {
+  padding-left: 1rem;
+}
+.level1 {
+  padding-left: 2rem;
+}
+.level2 {
+  padding-left: 3rem;
+}
+
+.menuIcon {
+  margin-right: 0.5rem;
+}
+
+.menuLabel {
+  flex-grow: 1;
+}
+
+.chevron {
+  transition: all 0.3s ease 0s;
+
+  &.expanded {
+    transform: rotate(180deg);
+  }
+}
+
+.submenuWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: all 0.3s ease 0s;
+  background-color: #f9fafb;
+
+  &.expanded {
+    grid-template-rows: 1fr;
+  }
+}
+
+.submenuInner {
+  overflow: hidden;
+}

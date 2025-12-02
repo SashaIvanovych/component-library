@@ -1,0 +1,86 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.inputLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-primary, #1f2937);
+}
+
+.inputContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-color, #e5e7eb);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease 0s;
+
+  &:focus-within {
+    border: 1px solid var(--color-primary, #3b82f6);
+    outline: none;
+  }
+
+  &.hasError {
+    border: 1px solid #ef4444;
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+.inputField {
+  flex: 1;
+  padding: 0.5rem 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--color-text-primary, #1f2937);
+  background: transparent;
+  outline: none;
+
+  &::placeholder {
+    color: var(--color-text-secondary, #6b7280);
+  }
+
+  .hasError & {
+    color: #ef4444;
+  }
+}
+
+.inputError {
+  color: #ef4444;
+  font-size: 0.75rem;
+  padding-left: 0.5rem;
+}
+
+.inputActions {
+  display: flex;
+  align-items: center;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary, #6b7280);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease 0s;
+
+  &:hover {
+    color: var(--color-text-primary, #1f2937);
+  }
+
+  &:active {
+    transform: scale(0.8);
+  }
+}
